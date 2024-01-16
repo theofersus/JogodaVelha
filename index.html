@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Moirai+One&display=swap');
+        table{
+            margin: auto;
+            border: 1px solid rgb(0, 0, 0);
+            color: aliceblue;
+        }   
+        td{
+            margin: auto;
+            text-align: center;
+            border: 1px solid black;
+            background-color: black;
+            font-size: 70px;
+            height: 110px;
+            width: 110px;
+            text-shadow: 2px 2px 7px black;
+        }
+        h1{
+            text-align: center;
+            color: black;
+            font-family: 'Moirai One', system-ui;
+            font-weight: 900;
+        }
+        td:hover{
+            background-color: aliceblue;
+           color: black; 
+        }
+        body{
+            background-image: url("https://static.vecteezy.com/ti/vetor-gratis/p1/16596771-textura-de-fundo-de-superficie-padrao-listrado-de-marmore-branco-abstrato-textura-de-marmore-preto-e-branco-fundo-panoramico-amplo-abstrato-parede-e-piso-ou-decoracao-de-moveis-ilustracao-gratis-vetor.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 96.5vh;
+        }
+      </style>
+</head>
+<body>
+    <h1>Jogo da Velha</h1>
+    <table>
+        <tbody>
+            <tr>
+                <td onclick="marcar(this)"></td>
+                <td onclick="marcar(this)"></td>
+                <td onclick="marcar(this)"></td>
+            </tr>
+            <tr>
+                <td onclick="marcar(this)"></td>
+                <td onclick="marcar(this)"></td>
+                <td onclick="marcar(this)"></td>
+            </tr>
+            <tr>
+                <td onclick="marcar(this)"></td>
+                <td onclick="marcar(this)"></td>
+                <td onclick="marcar(this)"></td>
+            </tr>
+        </tbody>
+      </table>
+      <!-- <h4>
+        Jogo da Velha
+      </h4> -->
+      
+      <script>
+        let jogador = "X"
+    function marcar(td){
+        td.innerHTML = jogador
+        if(jogador == "X"){
+            jogador = "O"
+        }
+        else{
+            jogador = "X"
+        }
+    }
+      </script>
+</body>
+</html>
